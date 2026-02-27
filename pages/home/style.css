@@ -1,0 +1,219 @@
+/* Reset básico y variables */
+:root {
+    /* Paleta Brand (Basada en #15356D) */
+    --brand-50: #f0f4f9;
+    --brand-100: #d9e2f2;
+    --brand-200: #b1c5e7;
+    --brand-300: #86a6df;
+    --brand-400: #5988d9;
+    --brand-500: #15356d;
+    /* Primary */
+    --brand-600: #102a56;
+    --brand-700: #0c1f40;
+    --brand-800: #08152b;
+    --brand-900: #040a15;
+    --brand-950: #020409;
+
+    /* Acentos y Auxiliares */
+    --accent-color: #fbc02d;
+    /* Retenemos el dorado como acento para contraste */
+
+    /* Variables Semánticas */
+    --text-primary: var(--brand-900);
+    --text-secondary: var(--brand-700);
+    --bg-main: #fafbfd;
+    /* Blanco con un levísimo toque de la marca */
+    --bg-section: var(--brand-50);
+    --white: #ffffff;
+
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-main);
+}
+
+/* Header & Nav */
+.main-header {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container img {
+    height: 48px;
+    transition: transform var(--transition-speed);
+}
+
+.logo-container img:hover {
+    transform: scale(1.05);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--brand-700);
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: color var(--transition-speed);
+}
+
+.nav-link:not(.btn-primary)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--brand-500);
+    transition: width var(--transition-speed);
+}
+
+.nav-link:not(.btn-primary):hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--brand-500);
+}
+
+/* Base Buttons */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    /* Montserrat es un poco más ancha que Inter, ajustamos a 600 */
+    text-align: center;
+    transition: all var(--transition-speed);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--brand-500);
+    color: var(--white) !important;
+    border: 2px solid var(--brand-500);
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-600);
+    border-color: var(--brand-600);
+    box-shadow: 0 4px 12px rgba(21, 53, 109, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--brand-500);
+    border: 2px solid var(--brand-500);
+}
+
+.btn-secondary:hover {
+    background-color: var(--brand-500);
+    color: var(--white);
+    box-shadow: 0 4px 12px rgba(21, 53, 109, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-large {
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 1rem;
+    background: linear-gradient(135deg, var(--white) 0%, var(--brand-50) 100%);
+    min-height: 70vh;
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-title {
+    font-size: 3rem;
+    color: var(--brand-800);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    /* Montserrat luce muy bien en extra bold para títulos */
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Secciones genéricas */
+.services-section {
+    padding: 5rem 5%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
