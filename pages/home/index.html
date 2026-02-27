@@ -11,43 +11,817 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="logo-container">
-            <a href="index.html">
-                <img src="../../assets/logo/logo.png" alt="Logo de Impuesto al Día" id="site-logo">
-            </a>
+    <header class="header-glass">
+        <div class="header-container">
+            <div class="logo-container">
+                <a href="index.html" class="logo-link">
+                    <img src="../../assets/logo/logo.png" alt="Logo" id="site-logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#como-funciona" class="nav-link">Cómo funciona</a></li>
+                    <li><a href="#planes" class="nav-link">Planes</a></li>
+                    <li><a href="#faq" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#login" class="nav-link login-link">Acceder</a>
+                <a href="#planes" class="btn-primary btn-nav">Suscribirme</a>
+            </div>
         </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#" class="nav-link">Inicio</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#contacto" class="nav-link btn-primary">Contáctanos</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
         <section class="hero-section" id="inicio">
-            <div class="hero-content">
-                <h1 class="hero-title">Tu tranquilidad fiscal es nuestra prioridad</h1>
-                <p class="hero-subtitle">Asesoría tributaria profesional para que siempre estés al día.</p>
-                <div class="hero-actions">
-                    <a href="#contacto" class="btn-primary btn-large">Solicitar Asesoría</a>
-                    <a href="#servicios" class="btn-secondary btn-large">Ver Servicios</a>
+            <!-- Decorative background elements -->
+            <div class="hero-glow glow-1"></div>
+            <div class="hero-glow glow-2"></div>
+
+            <div class="hero-container">
+                <div class="hero-header">
+                    <h1 class="hero-title">Fiscalidad al día, en minutos.</h1>
+                    <p class="hero-subtitle">
+                        Recibe las novedades fiscales más relevantes de forma clara y sencilla.<br>
+                        Menos ruido, más criterio para asesorar con seguridad.
+                    </p>
+                </div>
+
+                <div class="hero-features-grid">
+                    <div class="feature-card delay-1">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                        </div>
+                        <p>Resumen diario de cambios, criterios y consultas con impacto real.</p>
+                    </div>
+                    <div class="feature-card delay-2">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        <p>PDF descargable + audio para ponerte en marcha sin parar.</p>
+                    </div>
+                    <div class="feature-card delay-3">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <p>Acceso a histórico por fechas en tu área privada.</p>
+                    </div>
+                    <div class="feature-card delay-4">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <p>Suscripción mensual con cobro automático.</p>
+                    </div>
+                </div>
+
+                <div class="hero-footer delay-4">
+                    <div class="hero-actions">
+                        <a href="#suscribirme" class="btn-primary btn-large">Suscribirme ahora</a>
+                        <a href="#ejemplo" class="btn-secondary-light btn-large">Ver un ejemplo del PDF y el audio</a>
+                    </div>
+                    <p class="hero-trust-note">Pensado para profesionales que no pueden permitirse <strong>enterarse
+                            tarde</strong>.</p>
                 </div>
             </div>
         </section>
 
-        <section class="services-section" id="servicios">
-            <h2>Nuestros Servicios</h2>
-            <!-- Resto del contenido pronto -->
+        <section class="problem-section" id="el-problema">
+            <div class="container section-container">
+                <div class="problem-header text-center">
+                    <h2 class="section-title">La fiscalidad no para. Tu agenda, <span
+                            class="highlight-text">tampoco.</span></h2>
+                    <p class="section-lead">
+                        Hoy la actualización fiscal exige tres cosas a la vez: filtrar ruido, reunir fuentes dispersas y
+                        encontrar tiempo para interpretar bien lo que cambia.
+                    </p>
+                </div>
+
+                <div class="problem-grid">
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="17 8 12 3 7 8"></polyline>
+                                <line x1="12" y1="3" x2="12" y2="15"></line>
+                            </svg>
+                        </div>
+                        <p>Publicaciones y criterios que se acumulan sin filtro.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 9l-6 6 6 6"></path>
+                                <path d="M20 4v7a4 4 0 0 1-4 4H4"></path>
+                            </svg>
+                        </div>
+                        <p>Interpretaciones contradictorias según la fuente.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="12" y1="8" x2="12" y2="12"></line>
+                                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                            </svg>
+                        </div>
+                        <p>Riesgo de pasar por alto un cambio que afecta a un cliente.</p>
+                    </div>
+
+                    <div class="problem-card">
+                        <div class="problem-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <p>Horas invertidas en buscar, leer y sintetizar.</p>
+                    </div>
+                </div>
+
+                <div class="problem-footer text-center">
+                    <div class="closing-box">
+                        <p class="closing-text">Cuando tu trabajo depende de estar al día, la actualización tiene que
+                            ser <strong>clara y constante</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="solution-section" id="la-solucion">
+            <div class="container section-container">
+                <div class="solution-grid">
+                    <div class="solution-content">
+                        <h2 class="section-title">Un envío diario: <br><span class="highlight-text">PDF + audio.</span>
+                        </h2>
+                        <p class="section-lead solution-lead">
+                            <strong>Impuestos al Día</strong> convierte lo relevante de cada jornada en dos formatos
+                            prácticos: un PDF directo para consultar y archivar y un audio corto para escuchar incluso
+                            en días a tope.
+                        </p>
+                        <div class="solution-cta">
+                            <a href="#ejemplo" class="btn-primary btn-large">Quiero verlo en acción</a>
+                        </div>
+                    </div>
+
+                    <div class="solution-features-card">
+                        <h3 class="overline-title">Lo que incluye</h3>
+                        <ul class="features-list">
+                            <li>
+                                <div class="feature-list-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="feature-list-text">
+                                    <strong>PDF diario</strong> con la información esencial y el contexto necesario para
+                                    aplicarla.
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-list-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                        <path
+                                            d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="feature-list-text">
+                                    <strong>Audio diario</strong> con explicación breve y útil (ideal para trayectos o
+                                    entre tareas).
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-list-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                    </svg>
+                                </div>
+                                <div class="feature-list-text">
+                                    <strong>Histórico</strong> en tu área privada, organizado por fecha.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works-section" id="como-funciona">
+            <div class="container section-container">
+                <div class="how-header text-center">
+                    <h2 class="section-title">Así de simple: te suscribes y lo recibes <span class="highlight-text">cada
+                            día.</span></h2>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <div class="timeline-step">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3 class="step-title">Elige tu plan</h3>
+                            <p class="step-desc">Individual si lo usas tú. Despachos si lo necesita tu equipo.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3 class="step-title">Completa la suscripción mensual</h3>
+                            <p class="step-desc">Cobro automático mensual con Stripe. Puedes gestionar tu suscripción en
+                                cualquier momento.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3 class="step-title">Accede al área privada</h3>
+                            <p class="step-desc">Consulta el contenido diario, descarga el PDF, escucha el audio y
+                                revisa el histórico.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h3 class="step-title">Revisa las novedades y tu archivo</h3>
+                            <p class="step-desc">El contenido del día se destaca como "Último" y se archiva
+                                automáticamente por fecha para que lo encuentres rápido cuando lo necesites.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-section" id="planes">
+            <div class="container section-container">
+                <div class="pricing-header text-center">
+                    <h2 class="section-title">Planes adaptados a tu <span class="highlight-text">despacho</span></h2>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Plan Individual -->
+                    <div class="pricing-card">
+                        <div class="pricing-card-header">
+                            <h3 class="plan-name">Plan Individual</h3>
+                            <div class="plan-price">
+                                <span class="price-number">20,00 €</span>
+                                <span class="price-period">por mes + IVA</span>
+                            </div>
+                            <p class="plan-desc">Para autónomos, profesionales y responsables fiscales en empresa que
+                                quieren estar al día con un formato práctico y fácil de seguir.</p>
+                        </div>
+                        <div class="pricing-card-body">
+                            <h4 class="plan-includes-title">Incluye:</h4>
+                            <ul class="plan-features">
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Noticias y casos reales contextualizados.</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Audio + resumen + PDF detallado.</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Un formato diario de <strong>10 minutos</strong>, riguroso pero ameno.</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Acceso personal a tu área privada con el histórico por fechas.</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Emails de gestión (compra, acceso y renovaciones).</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <a href="#suscribirme-individual" class="btn-secondary btn-large btn-block">Elegir
+                                Individual</a>
+                        </div>
+                    </div>
+
+                    <!-- Plan Despachos -->
+                    <div class="pricing-card popular-plan">
+                        <div class="popular-badge">Recomendado</div>
+                        <div class="pricing-card-header">
+                            <h3 class="plan-name">Plan Despachos</h3>
+                            <div class="plan-price">
+                                <span class="price-number">30,00 €</span>
+                                <span class="price-period">por mes + IVA</span>
+                            </div>
+                            <p class="plan-desc">Para despachos y equipos que necesitan múltiples accesos y un sistema
+                                estable para toda la oficina.</p>
+                        </div>
+                        <div class="pricing-card-body">
+                            <h4 class="plan-includes-title">Incluye:</h4>
+                            <ul class="plan-features">
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span><strong>Todo lo que incluye el plan Individual.</strong></span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Hasta tres personas por el mismo precio.</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Acceso al histórico por fechas para consulta interna.</span>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
+                                    <span>Adaptable a equipos con más personas.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="pricing-card-footer">
+                            <a href="#suscribirme-despachos" class="btn-primary btn-large btn-block">Elegir
+                                Despachos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section" id="beneficios">
+            <div class="container section-container">
+                <div class="benefits-header text-center">
+                    <h2 class="section-title">Un servicio pensado para <span class="highlight-text">ahorrarte
+                            tiempo</span> y ganar claridad.</h2>
+                </div>
+
+                <div class="benefits-grid">
+                    <!-- Beneficio 1 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+                            </svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">Filtro diario de lo importante</h3>
+                            <p class="benefit-desc">No es una recopilación: es una selección con intención práctica.</p>
+                        </div>
+                    </div>
+
+                    <!-- Beneficio 2 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">Aplicable al trabajo real</h3>
+                            <p class="benefit-desc">Enfoque orientado a decidir rápido qué cambia y qué hacer con ello.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Beneficio 3 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <line x1="9" y1="1" x2="9" y2="4"></line>
+                                <line x1="15" y1="1" x2="15" y2="4"></line>
+                                <line x1="9" y1="20" x2="9" y2="23"></line>
+                                <line x1="15" y1="20" x2="15" y2="23"></line>
+                                <line x1="20" y1="9" x2="23" y2="9"></line>
+                                <line x1="20" y1="14" x2="23" y2="14"></line>
+                                <line x1="1" y1="9" x2="4" y2="9"></line>
+                                <line x1="1" y1="14" x2="4" y2="14"></line>
+                            </svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">Dos formatos, un objetivo</h3>
+                            <p class="benefit-desc">PDF para consulta y archivo. Audio para ponerte al día en pocos
+                                minutos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Beneficio 4 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">Histórico accesible</h3>
+                            <p class="benefit-desc">Encuentra contenidos pasados por fecha cuando lo necesites, sin
+                                perder tiempo buscando.</p>
+                        </div>
+                    </div>
+
+                    <!-- Beneficio 5 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 8v4l3 3"></path>
+                            </svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">Sistema estable, sin improvisaciones</h3>
+                            <p class="benefit-desc">Área privada funcional y suscripción mensual automática.</p>
+                        </div>
+                    </div>
+
+                    <!-- Beneficio 6 -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="benefit-content">
+                            <h3 class="benefit-title">Pensado para escalar</h3>
+                            <p class="benefit-desc">Estructura preparada para crecer sin complicarte el día a día.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-section" id="testimonios">
+            <div class="container section-container">
+                <div class="testimonials-header text-center">
+                    <h2 class="section-title">Así lo usan profesionales que necesitan estar al día <span
+                            class="highlight-text">sin perder horas.</span></h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonio 1 -->
+                    <div class="google-review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar">A</div>
+                                <div class="reviewer-name">Ana M.</div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                alt="Google Logo" class="google-logo">
+                        </div>
+                        <div class="review-stars">
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <p class="review-text">"Desde que uso Impuesto al Día, el trayecto en coche a la oficina es el
+                            momento de actualizarme. El audio de 10 minutos me da todo el contexto que necesito sin
+                            tener que sentarme a leer de cero al llegar."</p>
+                    </div>
+
+                    <!-- Testimonio 2 -->
+                    <div class="google-review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar" style="background-color: var(--brand-700);">C</div>
+                                <div class="reviewer-name">Carlos R.</div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                alt="Google Logo" class="google-logo">
+                        </div>
+                        <div class="review-stars">
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <p class="review-text">"El Plan de Despachos nos salvó la vida. Ahora todos en la oficina
+                            manejamos el mismo nivel de actualización. El PDF del histórico es perfecto para resolver
+                            consultas en el acto."</p>
+                    </div>
+
+                    <!-- Testimonio 3 -->
+                    <div class="google-review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-avatar"
+                                    style="background-color: var(--brand-300); color: var(--brand-900);">L</div>
+                                <div class="reviewer-name">Laura G.</div>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                alt="Google Logo" class="google-logo">
+                        </div>
+                        <div class="review-stars">
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <svg viewBox="0 0 24 24" fill="#FBBC05">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                        </div>
+                        <p class="review-text">"La mayor ventaja es que no es ruido como otros boletines. Es una
+                            selección precisa, comentada y aplicable. Siento que recuperé horas valiosas de mi semana."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="container section-container">
+                <div class="faq-header text-center">
+                    <h2 class="section-title">Preguntas frecuentes sobre nuestro servicio</h2>
+                </div>
+
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>¿Qué recibo exactamente cada día?</span>
+                            <span class="faq-icon"></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Un PDF descargable con la selección del día y un audio breve con explicación práctica.
+                            </p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>¿A qué hora se publica el contenido?</span>
+                            <span class="faq-icon"></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Se publica diariamente a las X hs.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>¿Dónde puedo consultar el histórico?</span>
+                            <span class="faq-icon"></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>En tu área privada, con acceso al contenido por fecha y al “Último” destacado.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>¿Puedo cancelar cuando quiera?</span>
+                            <span class="faq-icon"></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Sí. La suscripción es mensual y puedes cancelarla desde tu cuenta (o pidiendo ayuda a
+                                soporte, según configuración).</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>¿Cómo se realiza el pago?</span>
+                            <span class="faq-icon"></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Con cobro automático mensual mediante Stripe.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>¿El plan Despachos incluye varios accesos?</span>
+                            <span class="faq-icon"></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Sí. Está pensado para <strong>equipos</strong>. Incluye hasta 3 usuarios, para que podáis
+                                entrar varias personas del despacho sin inconvenientes.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>¿Hay soporte si tengo problemas de acceso o facturación?</span>
+                            <span class="faq-icon"></span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Sí. Escríbenos y te ayudamos con el acceso, la renovación o la gestión de la suscripción.
+                            </p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta-section" id="empezar">
+            <div class="container section-container">
+                <div class="final-cta-content text-center">
+                    <h2 class="section-title cta-title">Mantenerte al día puede ser simple.</h2>
+                    <p class="section-lead cta-lead">
+                        Si tu trabajo exige criterio y rapidez, <strong>Impuestos al Día</strong> convierte la
+                        actualización fiscal en un hábito diario, simple y sostenible: PDF, audio y un histórico siempre
+                        a mano.
+                    </p>
+                    <div class="final-cta-actions">
+                        <a href="#planes" class="btn-primary btn-large">Empezar suscripción</a>
+                        <a href="#ejemplo" class="btn-secondary btn-large">Ver ejemplo</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-grid">
+                <!-- Branding & Info -->
+                <div class="footer-brand">
+                    <img src="../../assets/logo/logo.png" alt="Logo de Impuestos al Día" class="footer-logo">
+                    <p class="footer-desc">
+                        Convirtiendo la actualización fiscal en un hábito diario, simple y sostenible para profesionales
+                        exigentes.
+                    </p>
+                </div>
+
+                <!-- Enlaces Rápidos -->
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#como-funciona">Cómo funciona</a></li>
+                        <li><a href="#planes">Planes y Precios</a></li>
+                        <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-links-col">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Aviso Legal</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Impuestos al Día. Todos los derechos reservados.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
