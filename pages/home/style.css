@@ -1409,6 +1409,18 @@ h6 {
         font-size: 2.2rem;
     }
 
+    .solution-lead {
+        text-align: center;
+    }
+
+    .solution-cta {
+        text-align: center;
+    }
+
+    .solution-content .section-title {
+        text-align: center;
+    }
+
     .problem-grid {
         grid-template-columns: 1fr;
     }
