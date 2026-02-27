@@ -888,8 +888,8 @@ h6 {
 ================================== */
 .testimonials-section {
     padding: 7rem 1rem;
-    background-color: var(--bg-section);
-    /* Fondo suave para contrastar con los beneficios blancos */
+    background-color: #f8fafc;
+    /* Gris ultra claro para diferenciar de benefits */
 }
 
 .testimonials-header {
