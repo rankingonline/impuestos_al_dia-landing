@@ -219,9 +219,8 @@ h6 {
     padding: 2rem 0;
     min-height: 100vh;
     background-image: url('../../assets/hero.png');
-    background-size: 105%;
-    background-repeat: no-repeat;
-    background-color: var(--white);
+    background-size: 100%;
+    background-size: cover;
     position: relative;
     overflow: hidden;
 }
@@ -286,19 +285,19 @@ h6 {
 /* Positions & Individual Animations */
 .card-audio {
     top: 25%;
-    right: 15%;
+    right: 12%;
     animation-delay: 0s;
 }
 
 .card-pdf {
     bottom: 25%;
-    right: 10%;
+    right: 20%;
     animation-delay: -2s;
 }
 
 .card-update {
-    bottom: 40%;
-    right: 35%;
+    top: 22%;
+    left: 38%;
     animation-delay: -4s;
 }
 
@@ -317,10 +316,25 @@ h6 {
     animation: wave 1s infinite ease-in-out;
 }
 
-.line-1 { height: 60%; animation-delay: 0.2s; }
-.line-2 { height: 100%; animation-delay: 0.4s; }
-.line-3 { height: 80%; animation-delay: 0.6s; }
-.line-4 { height: 40%; animation-delay: 0.8s; }
+.line-1 {
+    height: 60%;
+    animation-delay: 0.2s;
+}
+
+.line-2 {
+    height: 100%;
+    animation-delay: 0.4s;
+}
+
+.line-3 {
+    height: 80%;
+    animation-delay: 0.6s;
+}
+
+.line-4 {
+    height: 40%;
+    animation-delay: 0.8s;
+}
 
 .icon-circle {
     width: 32px;
@@ -333,7 +347,10 @@ h6 {
     justify-content: center;
 }
 
-.icon-circle svg { width: 16px; height: 16px; }
+.icon-circle svg {
+    width: 16px;
+    height: 16px;
+}
 
 .pulse-indicator {
     width: 8px;
@@ -353,31 +370,52 @@ h6 {
 }
 
 @keyframes floatCard {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 @keyframes wave {
-    0%, 100% { transform: scaleY(0.5); }
-    50% { transform: scaleY(1); }
+
+    0%,
+    100% {
+        transform: scaleY(0.5);
+    }
+
+    50% {
+        transform: scaleY(1);
+    }
 }
 
 @keyframes pulsePing {
-    75%, 100% { transform: scale(3); opacity: 0; }
+
+    75%,
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
 }
 
 @media (max-width: 1200px) {
-    .status-card { display: none; }
+    .status-card {
+        display: none;
+    }
 }
 
 .hero-container {
-    max-width: 1280px;
+    max-width: 1512px;
     width: 100%;
     margin: 0 auto;
     padding: 8rem 2rem 5rem;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 4rem;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2rem;
     align-items: center;
     position: relative;
     z-index: 1;
@@ -386,16 +424,27 @@ h6 {
 .hero-col-left {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
-    padding: 3rem;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    gap: 2rem;
+    padding: 3rem 0;
+    background: transparent;
     animation: slideUpFade 1s cubic-bezier(0.16, 1, 0.3, 1) both;
     text-align: left;
-    max-width: 620px;
+    max-width: 580px;
+    position: relative;
+    z-index: 5;
+}
+
+/* Reduciendo el ancho del fondo translúcido */
+.hero-col-left::before {
+    content: '';
+    position: absolute;
+    inset: -2rem -4rem -2rem -100vw;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1;
+    border-radius: 0 40px 40px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .hero-col-right {
@@ -484,26 +533,40 @@ h6 {
 .hero-actions-refined {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 1.5rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .btn-primary-elegant {
-    background: var(--brand-900);
+    background: var(--brand-500);
     color: var(--white);
-    padding: 1.1rem 2.2rem;
-    border-radius: 4px;
+    padding: 1rem 2rem;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 700;
+    font-size: 1rem;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(4, 10, 21, 0.15);
+    box-shadow: 0 10px 25px rgba(21, 53, 109, 0.2);
+    border: none;
 }
 
 .btn-primary-elegant:hover {
-    background: var(--brand-500);
-    transform: translateY(-2px);
-    box-shadow: 0 15px 25px rgba(21, 53, 109, 0.2);
+    background: var(--brand-950);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(21, 53, 109, 0.3);
+}
+
+.hero-trust-note {
+    font-size: 0.95rem;
+    color: var(--brand-600);
+    margin: 0;
+    opacity: 0.9;
+}
+
+.hero-trust-note strong {
+    color: var(--brand-900);
+    font-weight: 700;
 }
 
 .btn-text-link {
