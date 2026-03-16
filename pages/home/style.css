@@ -284,20 +284,20 @@ h6 {
 
 /* Positions & Individual Animations */
 .card-audio {
-    top: 25%;
+    top: 56%;
     right: 12%;
     animation-delay: 0s;
 }
 
 .card-pdf {
     bottom: 25%;
-    right: 20%;
+    right: 25%;
     animation-delay: -2s;
 }
 
 .card-update {
-    top: 22%;
-    left: 38%;
+    top: 55%;
+    left: 50%;
     animation-delay: -4s;
 }
 
